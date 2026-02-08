@@ -7,6 +7,5 @@ dist
 # workflow files
 .claude
 .codex
-.docs
 .review
 .todo.md
