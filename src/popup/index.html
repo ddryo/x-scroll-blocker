@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Scroll Blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header__brand">
+          <svg class="header__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          <h1 class="header__title">Scroll Blocker</h1>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="toggle-card">
+          <div class="toggle-card__info">
+            <span class="toggle-card__label">スクロール制限</span>
+            <span class="toggle-card__status" id="status-text">オン</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-x" class="toggle__input" />
+            <span class="toggle__slider"></span>
+          </label>
+        </div>
+
+        <div class="optional-feeds">
+          <div class="optional-feeds__header">対象ページ</div>
+          <div class="optional-feeds__list">
+            <label class="optional-feed-item">
+              <span class="optional-feed-item__label">検索</span>
+              <div class="toggle toggle--small">
+                <input type="checkbox" id="toggle-search" class="toggle__input" />
+                <span class="toggle__slider"></span>
+              </div>
+            </label>
+            <label class="optional-feed-item">
+              <span class="optional-feed-item__label">プロフィール</span>
+              <div class="toggle toggle--small">
+                <input type="checkbox" id="toggle-profile" class="toggle__input" />
+                <span class="toggle__slider"></span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="threshold-card">
+          <div class="threshold-card__header">
+            <span class="threshold-card__label">制限までの距離</span>
+            <span class="threshold-card__value" id="threshold-value">10 画面分</span>
+          </div>
+          <input type="range" id="threshold-slider" class="threshold-slider" min="3" max="50" step="1" value="10" />
+          <div class="threshold-card__range">
+            <span>3</span>
+            <span>50</span>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="popup.ts"></script>
+  </body>
+</html>
