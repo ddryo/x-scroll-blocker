@@ -2,7 +2,7 @@
 
 **X Scroll Blocker**
 
-Last updated / 最終更新日: 2025-06-08
+Last updated / 最終更新日: 2026-02-08
 
 ---
 
