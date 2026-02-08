@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- 盾の形 -->
+  <path
+    d="M64 8 L16 32 L16 64 C16 96 36 116 64 124 C92 116 112 96 112 64 L112 32 Z"
+    fill="#4A90D9"
+    stroke="#3A7BC8"
+    stroke-width="2"
+  />
+  <!-- 一時停止マーク（左バー） -->
+  <rect x="44" y="44" width="14" height="44" rx="3" fill="#FFFFFF" />
+  <!-- 一時停止マーク（右バー） -->
+  <rect x="70" y="44" width="14" height="44" rx="3" fill="#FFFFFF" />
+</svg>

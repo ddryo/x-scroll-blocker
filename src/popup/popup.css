@@ -1,0 +1,265 @@
+/* === Reset === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Base === */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  width: 320px;
+  background-color: #000000;
+  color: #e7e9ea;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  padding: 20px;
+}
+
+/* === Header === */
+.header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #2f3336;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__icon {
+  width: 20px;
+  height: 20px;
+  fill: #e7e9ea;
+  flex-shrink: 0;
+}
+
+.header__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #e7e9ea;
+  letter-spacing: -0.02em;
+}
+
+/* === Main === */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* === Toggle Card === */
+.toggle-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background-color: #16181c;
+  border-radius: 16px;
+  border: 1px solid #2f3336;
+}
+
+.toggle-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toggle-card__label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e7e9ea;
+}
+
+.toggle-card__status {
+  font-size: 13px;
+  color: #1d9bf0;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.toggle-card__status.is-off {
+  color: #71767b;
+}
+
+/* === Toggle Switch === */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.toggle__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3e4144;
+  border-radius: 28px;
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toggle__slider::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #e7e9ea;
+  border-radius: 50%;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toggle__input:checked + .toggle__slider {
+  background-color: #1d9bf0;
+}
+
+.toggle__input:checked + .toggle__slider::before {
+  transform: translateX(20px);
+}
+
+.toggle__input:focus-visible + .toggle__slider {
+  outline: 2px solid #1d9bf0;
+  outline-offset: 2px;
+}
+
+/* === Optional Feeds === */
+.optional-feeds {
+  padding: 14px 16px;
+  background-color: #16181c;
+  border-radius: 16px;
+  border: 1px solid #2f3336;
+}
+
+.optional-feeds__header {
+  font-size: 13px;
+  font-weight: 500;
+  color: #71767b;
+  margin-bottom: 12px;
+}
+
+.optional-feeds__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.optional-feed-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.optional-feed-item__label {
+  font-size: 14px;
+  color: #e7e9ea;
+}
+
+/* Small toggle variant */
+.toggle--small {
+  width: 40px;
+  height: 24px;
+}
+
+.toggle--small .toggle__slider::before {
+  width: 18px;
+  height: 18px;
+}
+
+.toggle--small .toggle__input:checked + .toggle__slider::before {
+  transform: translateX(16px);
+}
+
+/* === Threshold Card === */
+.threshold-card {
+  padding: 16px;
+  background-color: #16181c;
+  border-radius: 16px;
+  border: 1px solid #2f3336;
+}
+
+.threshold-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.threshold-card__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e7e9ea;
+}
+
+.threshold-card__value {
+  font-size: 14px;
+  color: #1d9bf0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* === Range Slider === */
+.threshold-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #3e4144;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.threshold-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #1d9bf0;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(29, 155, 240, 0.3);
+  transition: box-shadow 0.15s ease;
+}
+
+.threshold-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 2px 12px rgba(29, 155, 240, 0.5);
+}
+
+.threshold-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #1d9bf0;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(29, 155, 240, 0.3);
+}
+
+.threshold-card__range {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #536471;
+  font-variant-numeric: tabular-nums;
+}
