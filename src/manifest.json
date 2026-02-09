@@ -4,10 +4,6 @@
   "version": "0.2.0",
   "description": "X (Twitter) の無限スクロールをブロックします。一定のスクロールを検知したらアラートダイアログを表示します。",
   "permissions": ["storage"],
-  "host_permissions": [
-    "*://*.x.com/*",
-    "*://*.twitter.com/*"
-  ],
   "background": {
     "service_worker": "background/index.ts"
   },
