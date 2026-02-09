@@ -16,7 +16,7 @@ X（旧 Twitter）のタイムラインの無限スクロールをブロック�
 
 ### Chrome Web Store
 
-（審査完了後にリンクを掲載予定）
+[Chrome Web Store からインストール](https://chromewebstore.google.com/detail/x-scroll-blocker/dgbiomddhonbldolidolddbaphckdemc)
 
 ### 手動インストール（開発者向け）
 
