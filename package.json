@@ -1,6 +1,6 @@
 {
   "name": "infinite-scroll-blocker",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "description": "SNS の無限スクロールをブロックする Chrome 拡張機能",
   "type": "module",
@@ -10,6 +10,7 @@
     "dev": "vite build --watch --mode development",
     "prebuild": "npm run generate-icons",
     "build": "vite build",
+    "postbuild": "VERSION=$(node -p \"require('./package.json').version\") && cd dist && zip -r \"../../x-scroll-blocker-v${VERSION}.zip\" .",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write \"src/**/*.{ts,html,css,json}\"",

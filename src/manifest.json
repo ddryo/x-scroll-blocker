@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "X Scroll Blocker",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "X (Twitter) の無限スクロールをブロックします。一定のスクロールを検知したらアラートダイアログを表示します。",
   "permissions": ["storage"],
   "background": {
